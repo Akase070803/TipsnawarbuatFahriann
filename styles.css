@@ -1,0 +1,121 @@
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #f8f9fa;
+    --accent-color: #FF9800;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Welcome Screen - Perubahan Utama */
+.welcome-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--primary-color);
+}
+
+.welcome-container {
+    display: flex;
+    flex-direction: row; /* Pastikan orientasi horizontal */
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    max-width: 800px;
+    margin: 0 1rem;
+}
+
+.welcome-image {
+    width: 250px;       /* Lebar 5 unit */
+    height: 200px;      /* Tinggi 4 unit (rasio 5:4) */
+    border-radius: 8px;
+    margin-right: 2rem; /* Jarak ke kanan untuk teks */
+    object-fit: cover;  /* Pastikan gambar terisi proporsional */
+    border: 3px solid var(--accent-color); /* Border tambahan */
+}
+
+.welcome-message {
+    flex: 1;            /* Mengisi sisa space */
+    text-align: left;   /* Teks rata kiri */
+}
+
+.welcome-message h1 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 2.2rem;
+}
+
+.welcome-message p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+.start-btn {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.start-btn:hover {
+    background-color: #e68a00;
+    transform: translateY(-2px);
+}
+
+/* Konten lainnya tetap sama */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    border-bottom: 5px solid var(--accent-color);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ... (style lainnya tetap sama seperti sebelumnya) ... */
+
+@media (max-width: 768px) {
+    .welcome-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .welcome-image {
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+        width: 200px;
+        height: 160px; /* Tetap pertahankan rasio 5:4 */
+    }
+    
+    .welcome-message {
+        text-align: center;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .step-content {
+        margin-left: 0;
+        padding-top: 2.5rem;
+    }
+}
